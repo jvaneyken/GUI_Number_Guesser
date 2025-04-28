@@ -102,7 +102,10 @@ class Main extends JFrame implements ActionListener {
                 this.guesser.lower();
                 this.guessField.setText(Integer.toString(guesser.getCurrentGuess()));
             } catch(NumberGuesserIllegalStateException exception) {
-
+                JOptionPane.showInternalMessageDialog(null,
+                        exception.getMessage(),
+                        "Notice",
+                        JOptionPane.INFORMATION_MESSAGE);
             }
         }
 
@@ -111,7 +114,10 @@ class Main extends JFrame implements ActionListener {
                 this.guesser.higher();
                 this.guessField.setText(Integer.toString(guesser.getCurrentGuess()));
             } catch(NumberGuesserIllegalStateException exception) {
-
+                JOptionPane.showInternalMessageDialog(null,
+                        exception.getMessage(),
+                        "Notice",
+                        JOptionPane.INFORMATION_MESSAGE);
             }
         }
 
