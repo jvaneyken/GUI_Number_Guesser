@@ -79,7 +79,7 @@ class Main extends JFrame implements ActionListener {
         add(correctButton, positionConst);
 
         // Get Ready to play the game
-        this.guesser = new RandomNumberGuesser(1, 100);
+        this.guesser = new NumberGuesser(1, 100);
         this.guessField.setText("" + guesser.getCurrentGuess());
     }
 
