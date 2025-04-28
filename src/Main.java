@@ -120,6 +120,8 @@ class Main extends JFrame implements ActionListener {
         }
 
         if (buttonPressed == this.resetButton) {
+            this.guesser.reset();
+            this.guessField.setText(Integer.toString(guesser.getCurrentGuess()));
             // I put this code in just to show how to open a JOptionPane
 
             // When the reset button is pressed the number guesser should
@@ -127,10 +129,10 @@ class Main extends JFrame implements ActionListener {
             // notify the user if they are cheating in a catch block.
 
             // You should remove this line from this reset block
-            JOptionPane.showInternalMessageDialog(null,
-                    "Reset!",
-                    "Notice",
-                    JOptionPane.INFORMATION_MESSAGE);
+//            JOptionPane.showInternalMessageDialog(null,
+//                    "Reset!",
+//                    "Notice",
+//                    JOptionPane.INFORMATION_MESSAGE);
         }
     }
 
