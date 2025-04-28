@@ -98,11 +98,21 @@ class Main extends JFrame implements ActionListener {
         Object buttonPressed = event.getSource();
 
         if (buttonPressed == this.lowerButton) {
-            // Lower button was pressed
+            try {
+                this.guesser.lower();
+                this.guessField.setText(Integer.toString(guesser.getCurrentGuess()));
+            } catch(NumberGuesserIllegalStateException exception) {
+
+            }
         }
 
         if (buttonPressed == this.higherButton) {
-            // Higher button was pressed
+            try {
+                this.guesser.higher();
+                this.guessField.setText(Integer.toString(guesser.getCurrentGuess()));
+            } catch(NumberGuesserIllegalStateException exception) {
+
+            }
         }
 
         if (buttonPressed == this.correctButton) {
