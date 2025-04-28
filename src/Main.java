@@ -116,7 +116,7 @@ class Main extends JFrame implements ActionListener {
         }
 
         if (buttonPressed == this.correctButton) {
-            // Correct button was pressed
+            System.exit(0);
         }
 
         if (buttonPressed == this.resetButton) {
